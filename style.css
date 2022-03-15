@@ -8,7 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgba(29, 47, 97, 0.952);
+  background-color: rgba(255, 230, 197, 0.904);
 }
 
 .name {
@@ -45,14 +45,15 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3d2d0));
+  background: linear-gradient(#f3d2d0);
   -webkit-clip-path: circle(30.6% at 100% 100%);
           clip-path: circle(30.6% at 100% 100%);
 }
 
 .name h1,
 .name p {
+  text-align: center;
   z-index: 100;
   cursor: pointer;
   -webkit-transition: opacity 1s ease;
@@ -60,7 +61,8 @@ body {
 }
 
 .name h1 {
-  font-size: 80px;
+  font-size: 60px;
+  font-family: "Parisienne", cursive;
 }
 
 .name p {
@@ -98,16 +100,16 @@ body {
   bottom: 200px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 90px;
+  height: 100px;
   width: 40px;
-  overflow: hidden;
 }
 
 .hero__footer .hero__downarrow {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 30px;
   width: 10px;
+  height: 90px;
   -webkit-animation: arrow-anime 2s linear infinite;
           animation: arrow-anime 2s linear infinite;
 }
@@ -118,7 +120,7 @@ body {
           transform: rotate(90deg);
   color: rgba(31, 29, 29, 0.924);
   left: -2px;
-  top: 11px;
+  top: 40px;
   font-size: 1.5em;
 }
 
@@ -166,7 +168,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   width: 70%;
-  height: 80%;
+  height: 70%;
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,9 +183,9 @@ body {
   border-radius: 15px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
 .about_me::before {
@@ -191,8 +193,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3d2d0));
+  background: linear-gradient(#f3d2d0);
   -webkit-clip-path: circle(30.6% at 100% 0);
           clip-path: circle(30.6% at 100% 0);
 }
@@ -202,99 +204,48 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3d2d0));
+  background: linear-gradient(#f3d2d0);
   -webkit-clip-path: circle(30.3% at 0 50%);
           clip-path: circle(30.3% at 0 50%);
 }
 
+.about_me img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
 .about_me .detail {
+  height: 100%;
   position: relative;
   padding: 30px;
-}
-
-.about_me .detail h2 {
-  position: absolute;
-  top: -80px;
-  right: 40px;
-  font-size: 8rem;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.card {
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b86760));
-  background: linear-gradient(#b86760);
-  -webkit-clip-path: circle(16.2% at 40% 28%);
-          clip-path: circle(16.2% at 40% 28%);
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
-  -webkit-clip-path: circle(29.8% at 77% 88%);
-          clip-path: circle(29.8% at 77% 88%);
-}
-
-.card .inner_2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: center;
-  width: 80%;
-  z-index: 2;
 }
 
-.card .inner_2 > div {
-  width: 400px;
-  height: 700px;
-  margin-bottom: 30px;
+.about_me .detail a {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
-  -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-
-.card .inner_2 h2 {
-  position: absolute;
-  top: 0px;
-  right: 40px;
-  font-size: 8rem;
-  color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.5);
+  color: black;
+  text-decoration: none;
+  padding: 10px 0;
 }
 
 footer {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,10 +262,10 @@ footer::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
-  -webkit-clip-path: circle(29.5% at 77% -10%);
-          clip-path: circle(29.5% at 77% -10%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3d2d0));
+  background: linear-gradient(#f3d2d0);
+  -webkit-clip-path: circle(15.5% at 84.1% 40%);
+          clip-path: circle(15.5% at 84.1% 40%);
 }
 
 footer::after {
@@ -324,14 +275,16 @@ footer::after {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#b86760));
   background: linear-gradient(#b86760);
-  -webkit-clip-path: circle(46.5% at 7% 85%);
-          clip-path: circle(46.5% at 7% 85%);
+  -webkit-clip-path: circle(39.8% at 29% 98%);
+          clip-path: circle(39.8% at 29% 98%);
 }
 
 footer .contact {
-  width: 70%;
-  height: 40%;
-  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,6 +298,7 @@ footer .contact {
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
+  margin-bottom: 50px;
 }
 
 footer h2 {
@@ -363,5 +317,26 @@ footer .icons a {
 footer .icons i {
   font-size: 30px;
   margin-right: 10px;
+}
+
+@media (min-width: 481px) {
+  .hero__footer {
+    bottom: 150px;
+  }
+  .name h1 {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 769px) {
+  .name h1 {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .name h1 {
+    font-size: 90px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

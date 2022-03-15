@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgba(29, 47, 97, 0.952);
+  background-color:rgba(255, 230, 197, 0.904);
 }
 
 //-----------------------
@@ -34,17 +34,19 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
+    background: linear-gradient(rgb(243, 210, 208));
     clip-path: circle(30.6% at 100% 100%);
   }
   & h1,
   p {
+    text-align: center;
     z-index: 100;
     cursor: pointer;
     transition: opacity 1s ease;
   }
   & h1 {
-    font-size: 80px;
+    font-size: 60px;
+    font-family: "Parisienne", cursive;
   }
   p {
     font-size: 20px;
@@ -76,14 +78,15 @@ body {
   left: 50%;
   bottom: 200px;
   transform: translateX(-50%);
-  height: 90px;
+  height: 100px;
   width: 40px;
-  overflow: hidden;
+  
   & .hero__downarrow {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 30px;
     width: 10px;
+    height: 90px;
     animation: arrow-anime 2s linear infinite;
   }
   & .hero__scrolltext {
@@ -91,7 +94,7 @@ body {
     transform: rotate(90deg);
     color: rgba(31, 29, 29, 0.924);
     left: -2px;
-    top: 11px;
+    top: 40px;
     font-size: 1.5em;
   }
 }
@@ -116,11 +119,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   & .inner {
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     width: 70%;
-    height: 80%;
+    height: 70%;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -128,15 +132,15 @@ body {
     text-align: center;
     border-radius: 15px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    overflow: hidden;
   }
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
+    background: linear-gradient(rgb(243, 210, 208));
     clip-path: circle(30.6% at 100% 0);
   }
   &::after {
@@ -144,74 +148,31 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
+    background: linear-gradient(rgb(243, 210, 208));
     clip-path: circle(30.3% at 0 50%);
   }
+  & img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  
   & .detail {
+    height:100%;
     position: relative;
     padding: 30px;
-    
-    & h2 {
-      position: absolute;
-      top: -80px;
-      right: 40px;
-      font-size: 8rem;
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-}
-
-//--------------------------
-// Works, Resume & Contact
-//--------------------------
-.card {
-  // border: 1px solid red;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(184, 103, 96));
-    clip-path: circle(16.2% at 40% 28%);
-  }
-  &::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
-    clip-path: circle(29.8% at 77% 88%);
-  }
-  & .inner_2 {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-around;
-    text-align: center;
-    width: 80%;
-    z-index:2;
     
-    & > div {
-      width: 400px;
-      height: 700px;
-      margin-bottom: 30px;
+    & a {
       border-top: 1px solid rgba(255, 255, 255, 0.4);
       border-left: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 15px;
-      box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(5px);
-    }
-    & h2 {
-      position: absolute;
-      top: 0px;
-      right: 40px;
-      font-size: 8rem;
-      color: rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.5);
+      color: black;
+      text-decoration: none;
+      padding: 10px 0;
     }
   }
 }
@@ -221,8 +182,9 @@ body {
 //--------------------------
 footer {
   // border: 1px solid red;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,8 +194,8 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
-    clip-path: circle(29.5% at 77% -10%);
+    background: linear-gradient(rgb(243, 210, 208));
+    clip-path: circle(15.5% at 84.1% 40%);
   }
   &::after {
     content: "";
@@ -241,31 +203,53 @@ footer {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgb(184, 103, 96));
-    clip-path: circle(46.5% at 7% 85%);
+    clip-path: circle(39.8% at 29% 98%);
   }
 
   & .contact {
-    width: 70%;
-    height: 40%;
-    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index:3;
+    z-index: 3;
+    margin-bottom: 50px;
   }
   & h2 {
     font-size: 50px;
-    font-family:cursive;
+    font-family: cursive;
   }
   & p {
     font-size: 18px;
   }
-  & .icons a{
+  & .icons a {
     color: black;
   }
   & .icons i {
     font-size: 30px;
     margin-right: 10px;
+  }
+}
+
+// Media query
+@media (min-width: 481px) {
+  .hero__footer {
+    bottom: 150px;
+  }
+  .name h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 769px) {
+  .name h1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 1025px) {
+  .name h1 {
+    font-size: 90px;
   }
 }
