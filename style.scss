@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgba(231, 230, 218, 0.8);
+  background-color: rgba(224, 181, 152, 0.452);
 }
 
 //-----------------------
@@ -90,7 +90,7 @@ body {
   & .hero__scrolltext {
     position: absolute;
     transform: rotate(90deg);
-    color: rgba(29, 28, 28, 0.924);
+    color: rgba(31, 29, 29, 0.924);
     left: -2px;
     top: 11px;
     font-size: 1.5em;
@@ -148,6 +148,18 @@ body {
     height: 100%;
     background: linear-gradient(rgb(224, 191, 188));
     clip-path: circle(36.3% at 0 54%);
+  }
+  & .detail {
+    position: relative;
+    padding: 30px;
+
+    & h2 {
+      position: absolute;
+      top: -80px;
+      right: 40px;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
