@@ -8,7 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgba(224, 181, 152, 0.452);
+  background-color: rgba(29, 47, 97, 0.952);
 }
 
 .name {
@@ -167,7 +167,7 @@ body {
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   width: 70%;
   height: 80%;
-  z-index: 1;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,8 +204,8 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
   background: linear-gradient(#e0bfbc);
-  -webkit-clip-path: circle(36.3% at 0 54%);
-          clip-path: circle(36.3% at 0 54%);
+  -webkit-clip-path: circle(30.3% at 0 50%);
+          clip-path: circle(30.3% at 0 50%);
 }
 
 .about_me .detail {
@@ -227,29 +227,141 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b86760));
+  background: linear-gradient(#b86760);
+  -webkit-clip-path: circle(16.2% at 40% 28%);
+          clip-path: circle(16.2% at 40% 28%);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
+  background: linear-gradient(#e0bfbc);
+  -webkit-clip-path: circle(29.8% at 77% 88%);
+          clip-path: circle(29.8% at 77% 88%);
+}
+
+.card .inner_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  width: 80%;
+  z-index: 2;
+}
+
+.card .inner_2 > div {
+  width: 400px;
+  height: 700px;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.card .inner_2 h2 {
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.card .content {
+footer::before {
+  content: "";
+  position: absolute;
   width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
+  background: linear-gradient(#e0bfbc);
+  -webkit-clip-path: circle(29.5% at 77% -10%);
+          clip-path: circle(29.5% at 77% -10%);
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b86760));
+  background: linear-gradient(#b86760);
+  -webkit-clip-path: circle(46.5% at 7% 85%);
+          clip-path: circle(46.5% at 7% 85%);
+}
+
+footer .contact {
+  width: 70%;
+  height: 40%;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
 }
 
-.card .content > div {
-  border: 1px solid white;
-  -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.02);
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+footer h2 {
+  font-size: 50px;
+  font-family: cursive;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer .icons a {
+  color: black;
+}
+
+footer .icons i {
+  font-size: 30px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

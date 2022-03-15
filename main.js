@@ -13,3 +13,16 @@ off.addEventListener('click', function() {
   off.style.opacity = '1';
   on.style.opacity = '0.5';
 })
+
+
+VanillaTilt.init(document.querySelector(".inner"), {
+  max: 5,
+  speed: 400,
+  glare: true,
+});
+VanillaTilt.init(document.querySelectorAll(".inner_2 > div"), {
+  max: 5,
+  speed: 400,
+  glare: true,
+});
+
