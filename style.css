@@ -8,11 +8,10 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #c3a29e;
+  background-color: rgba(231, 230, 218, 0.8);
 }
 
 .name {
-  background-color: #c3a29e;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -35,8 +34,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e0bfbc));
-  background: linear-gradient(#e0bfbc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b86760));
+  background: linear-gradient(#b86760);
   -webkit-clip-path: circle(50.6% at 24% 12%);
           clip-path: circle(50.6% at 24% 12%);
 }
@@ -55,6 +54,9 @@ body {
 .name h1,
 .name p {
   z-index: 100;
+  cursor: pointer;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .name h1 {
@@ -65,10 +67,18 @@ body {
   font-size: 20px;
 }
 
+.name p.on {
+  opacity: 0.5;
+}
+
+.name .short_explaining {
+  opacity: 1;
+}
+
 .name .audio {
   position: absolute;
   top: 10px;
-  right: 100px;
+  right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +116,7 @@ body {
   position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  color: rgba(29, 28, 28, 0.7);
+  color: rgba(29, 28, 28, 0.924);
   left: -2px;
   top: 11px;
   font-size: 1.5em;

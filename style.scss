@@ -7,14 +7,13 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgb(195, 162, 158);
+  background-color: rgba(231, 230, 218, 0.8);
 }
 
 //-----------------------
 // My name
 //-----------------------
 .name {
-  background-color: rgb(195, 162, 158);
   width: 100%;
   height: 100%;
   display: flex;
@@ -27,7 +26,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(224, 191, 188));
+    background: linear-gradient(rgb(184, 103, 96));
     clip-path: circle(50.6% at 24% 12%);
   }
   &::after {
@@ -38,29 +37,35 @@ body {
     background: linear-gradient(rgb(224, 191, 188));
     clip-path: circle(30.6% at 100% 100%);
   }
-
   & h1,
   p {
     z-index: 100;
+    cursor: pointer;
+    transition: opacity 1s ease;
   }
-
   & h1 {
     font-size: 80px;
   }
-
   p {
     font-size: 20px;
+    &.on {
+      opacity: 0.5;
+    }
+  }
+
+  .short_explaining {
+    opacity: 1;
   }
 
   .audio {
     position: absolute;
     top: 10px;
-    right: 100px;
+    right: 0px;
     display: flex;
     & audio {
       display: none;
     }
-    & p{
+    & p {
       font-size: 30px;
     }
   }
@@ -85,7 +90,7 @@ body {
   & .hero__scrolltext {
     position: absolute;
     transform: rotate(90deg);
-    color: rgba(29, 28, 28, 0.7);
+    color: rgba(29, 28, 28, 0.924);
     left: -2px;
     top: 11px;
     font-size: 1.5em;
@@ -113,9 +118,9 @@ body {
   align-items: center;
   justify-content: center;
   // background-color: #fae3d9;
-  & .inner{
-    border-top: 1px solid rgba(255,255,255, 0.4);
-    border-left: 1px solid rgba(255,255,255, 0.4);
+  & .inner {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
     width: 70%;
     height: 80%;
     z-index: 1;
@@ -124,8 +129,8 @@ body {
     justify-content: center;
     text-align: center;
     border-radius: 15px;
-    box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
-    background: rgba(255,255,255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
   }
   &::before {
