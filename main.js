@@ -15,14 +15,12 @@ off.addEventListener('click', function() {
 })
 
 
+const a = document.querySelectorAll("a");
 VanillaTilt.init(document.querySelector(".inner"), {
   max: 5,
   speed: 400,
-  glare: true,
+  // glare: true,
 });
-VanillaTilt.init(document.querySelectorAll(".inner_2 > div"), {
-  max: 5,
-  speed: 400,
-  glare: true,
-});
+
+
 

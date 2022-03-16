@@ -9,6 +9,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 230, 197, 0.904);
+  font-family: Overpass, sans-serif;
 }
 
 .name {
@@ -51,30 +52,71 @@ body {
           clip-path: circle(30.6% at 100% 100%);
 }
 
-.name h1,
-.name p {
-  text-align: center;
+.name .top {
   z-index: 100;
+  -webkit-animation: popup 3s ease;
+          animation: popup 3s ease;
+}
+
+.name .top h1,
+.name .top p {
+  text-align: center;
   cursor: pointer;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
 
-.name h1 {
+.name .top h1 {
   font-size: 60px;
   font-family: "Parisienne", cursive;
 }
 
-.name p {
+.name .top p {
   font-size: 20px;
 }
 
-.name p.on {
+.name .top p.on {
   opacity: 0.5;
 }
 
-.name .short_explaining {
+.name .top .short_explaining {
   opacity: 1;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  70% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  70% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .name .audio {
@@ -206,14 +248,16 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#f3d2d0));
   background: linear-gradient(#f3d2d0);
-  -webkit-clip-path: circle(30.3% at 0 50%);
-          clip-path: circle(30.3% at 0 50%);
+  -webkit-clip-path: circle(25.3% at 20% 50%);
+          clip-path: circle(25.3% at 20% 50%);
 }
 
 .about_me img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  -webkit-box-shadow: 5px 5px 25px black;
+          box-shadow: 5px 5px 25px black;
 }
 
 .about_me .detail {
@@ -231,6 +275,11 @@ body {
       justify-content: space-around;
 }
 
+.about_me .detail h1 {
+  font-family: "Arizonia", cursive;
+  font-size: 40px;
+}
+
 .about_me .detail a {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
@@ -239,7 +288,19 @@ body {
           box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.5);
   color: black;
   text-decoration: none;
+  width: 60%;
+  margin: 0 auto;
   padding: 10px 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.about_me .detail a:hover {
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 footer {
@@ -281,7 +342,8 @@ footer::after {
 
 footer .contact {
   position: absolute;
-  bottom: 0;
+  height: 55%;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -298,16 +360,17 @@ footer .contact {
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 footer h2 {
   font-size: 50px;
-  font-family: cursive;
+  font-family: "Arizonia", cursive;
 }
 
 footer p {
-  font-size: 18px;
+  font-size: 12px;
+  text-align: center;
 }
 
 footer .icons a {
@@ -323,20 +386,31 @@ footer .icons i {
   .hero__footer {
     bottom: 150px;
   }
-  .name h1 {
+  .name .top h1 {
     font-size: 70px;
   }
 }
 
 @media (min-width: 769px) {
-  .name h1 {
+  .name .top h1 {
     font-size: 80px;
   }
 }
 
 @media (min-width: 1025px) {
-  .name h1 {
+  .name .top h1 {
     font-size: 90px;
+  }
+  .about_me .inner {
+    width: 60%;
+  }
+  footer::before {
+    -webkit-clip-path: circle(13.5% at 84.1% 40%);
+            clip-path: circle(13.5% at 84.1% 40%);
+  }
+  footer::after {
+    -webkit-clip-path: circle(35.8% at 29% 98%);
+            clip-path: circle(35.8% at 29% 98%);
   }
 }
 /*# sourceMappingURL=style.css.map */
