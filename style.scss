@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgb(253, 239, 239);
+  // background-color: rgb(251, 234, 218);
   font-family: Overpass, sans-serif;
   cursor: none;
 }
@@ -44,75 +44,6 @@ body {
 //-----------------------
 // My name
 //-----------------------
-.name {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(212, 109, 99));
-    clip-path: circle(50.6% at 24% 12%);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(226, 175, 174));
-    clip-path: circle(30.6% at 100% 100%);
-  }
-
-  & .top {
-    z-index: 100;
-    animation: popup 3s ease;
-    // filter: drop-shadow(5px 5px 0 #faf6f5);
-    // border: 2px solid #f5f1f1;
-    // border-radius: 30px;
-    // padding: 20px;
-    & h1,
-    p {
-      text-align: center;
-      transition: opacity 1s ease;
-    }
-    & h1 {
-      font-size: 60px;
-      font-weight: bold;
-      font-family: "Parisienne", cursive;
-      font-family: "Arizonia", cursive;
-    }
-    p {
-      font-size: 20px;
-      &.on {
-        opacity: 0.5;
-      }
-    }
-    .short_explaining {
-      opacity: 1;
-    }
-  }
-
-  @keyframes popup {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    70% {
-      opacity: 0.5;
-      transform: scale(1.3);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
   .audio {
     position: absolute;
     top: 10px;
@@ -125,7 +56,6 @@ body {
       font-size: 30px;
     }
   }
-}
 
 // Arrow anime
 .hero__footer {
@@ -196,7 +126,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgb(226, 175, 174));
-    clip-path: circle(30.6% at 100% 0);
+    clip-path: circle(50.6% at 100% 0);
   }
   &::after {
     content: "";
@@ -307,22 +237,12 @@ footer {
 
 // Media query
 @media (min-width: 481px) {
-  .hero__footer {
-    bottom: 150px;
-  }
-  .name .top h1{
-      font-size: 70px;
-  }
+
 }
 @media (min-width: 769px) {
-  .name .top h1{
-      font-size: 80px;
-  }
+ 
 }
 @media (min-width: 1025px) {
-  .name .top h1{
-      font-size: 90px;
-  }
   .about_me .inner {
     width: 60%;
   }
