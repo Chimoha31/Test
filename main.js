@@ -46,5 +46,16 @@ $(function(){
   });
 });
 
+$(function() {
+	setTimeout(function(){
+		$('.start p').fadeIn(1600);
+	},500); 
+	setTimeout(function(){
+		$('.start h1').fadeIn(1600);
+	},500); 
+	setTimeout(function(){
+		$('.start').fadeOut(500);
+	},3500);
+});
 
 

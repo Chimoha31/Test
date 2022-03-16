@@ -12,6 +12,39 @@ body {
   cursor: none;
 }
 
+.start {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+.start h1, .start p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 100%;
+  font-size: 80px;
+  text-align: center;
+}
+
+.start h1 {
+  font-family: "Arizonia", cursive;
+  font-family: "Arizonia", cursive;
+}
+
+.start p {
+  top: 60%;
+  font-size: 30px;
+}
+
 .cursor_container {
   position: relative;
   background: rgba(36, 35, 35, 0.603);
