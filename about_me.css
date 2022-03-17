@@ -5,12 +5,82 @@
 
 body {
   line-height: 1.5;
-  background-color: blanchedalmond;
+  background-color: #f1f0ef;
+  height: 100vh;
+}
+
+body .page {
+  background-color: #856e50;
+}
+
+body .page .menu-toggle {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+
+body .page .menu-toggle i {
+  color: white;
+}
+
+body .page .menu-toggle .menu-open,
+body .page .menu-toggle .menu-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+.menu-items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li {
+  list-style: none;
+  height: 60px;
+  margin-bottom: 50px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+
+.menu-items li:nth-child(2) {
+  margin-left: 40px;
+}
+
+.menu-items li:nth-child(3) {
+  margin-left: 80px;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.menu-items li i {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 2rem;
 }
 
 .container {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
   padding: 2rem;
-  padding-bottom: 400px;
+  padding-bottom: 100px;
   margin: 0 auto;
   max-width: 800px;
 }
@@ -20,6 +90,15 @@ body {
   padding: 4rem 0;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.container .top_section h1 {
+  display: inline;
+  border-bottom: 1px solid red;
+}
+
+.container .top_section p {
+  font-size: 1.5rem;
 }
 
 .timeline {
@@ -67,13 +146,13 @@ body {
   transition: 600ms ease;
   position: relative;
   z-index: 1;
-  margin: 40px 0;
+  margin: 20px 0;
   padding: 1rem;
   border-radius: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .timeline .section .bead {
@@ -87,6 +166,10 @@ body {
   top: 20%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.timeline .section .content {
+  font-size: 1.2rem;
 }
 
 .timeline .show-me:nth-child(n) {
