@@ -31,7 +31,7 @@ body {
   display: none;
   z-index: 9999;
   width: 100%;
-  font-size: 80px;
+  font-size: 56px;
   text-align: center;
 }
 
@@ -42,7 +42,7 @@ body {
 
 .start p {
   top: 60%;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .cursor_container {
@@ -337,7 +337,22 @@ footer .icons i {
   margin-right: 10px;
 }
 
+@media (min-width: 769px) {
+  .start h1 {
+    font-size: 72px;
+  }
+  .start p {
+    font-size: 25px;
+  }
+}
+
 @media (min-width: 1025px) {
+  .start h1 {
+    font-size: 80px;
+  }
+  .start p {
+    font-size: 25px;
+  }
   .about_me .inner {
     width: 60%;
   }
