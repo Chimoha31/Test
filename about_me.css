@@ -37,12 +37,41 @@ body .page .menu-toggle .menu-close {
   left: 50%;
   margin-top: -15px;
   margin-left: -15px;
+  -webkit-transition: all 0, 7s cubic-bezier(1, -0.07, 0.1, 1.12);
+  transition: all 0, 7s cubic-bezier(1, -0.07, 0.1, 1.12);
+}
+
+.menu-open {
+  -webkit-transform-origin: -100px -100px;
+          transform-origin: -100px -100px;
+}
+
+.menu-close {
+  -webkit-transform-origin: -100px -100px;
+          transform-origin: -100px -100px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.rotate .container {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.rotate .menu-open {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.rotate .menu-close {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .menu-items {
   position: fixed;
   bottom: 0;
-  left: 50px;
+  left: 20px;
   margin: 0;
   padding: 0;
 }
@@ -50,17 +79,19 @@ body .page .menu-toggle .menu-close {
 .menu-items li {
   list-style: none;
   height: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   -webkit-transform: translateX(-300px);
           transform: translateX(-300px);
+  -webkit-transition: all 0.7s cubic-bezier(1, -0.07, 0.1, 1.12);
+  transition: all 0.7s cubic-bezier(1, -0.07, 0.1, 1.12);
 }
 
 .menu-items li:nth-child(2) {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .menu-items li:nth-child(3) {
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 .menu-items li a {
@@ -75,6 +106,11 @@ body .page .menu-toggle .menu-close {
   font-size: 2rem;
 }
 
+.rotate .menu-items li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .container {
   position: relative;
   background-color: #fff;
@@ -82,7 +118,10 @@ body .page .menu-toggle .menu-close {
   padding: 2rem;
   padding-bottom: 100px;
   margin: 0 auto;
-  max-width: 800px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: all 0.7s cubic-bezier(1, -0.07, 0.1, 1.12);
+  transition: all 0.7s cubic-bezier(1, -0.07, 0.1, 1.12);
 }
 
 .container .top_section {
@@ -183,6 +222,13 @@ body .page .menu-toggle .menu-close {
   letter-spacing: 1px;
 }
 
+@media (min-width: 481px) {
+  .timeline .rotate .container {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
 @media (min-width: 769px) {
   .timeline .line {
     position: absolute;
@@ -211,6 +257,17 @@ body .page .menu-toggle .menu-close {
   }
   .timeline .content {
     width: calc(50% - 2rem);
+  }
+  .timeline .rotate .container {
+    -webkit-transform: rotate(-80deg);
+            transform: rotate(-80deg);
+  }
+}
+
+@media (min-width: 1025px) {
+  .timeline .rotate .container {
+    -webkit-transform: rotate(-100deg);
+            transform: rotate(-100deg);
   }
 }
 /*# sourceMappingURL=about_me.css.map */
