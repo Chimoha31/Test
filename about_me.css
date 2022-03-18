@@ -54,8 +54,8 @@ body .page .menu-toggle .menu-close {
 }
 
 .rotate .container {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
 }
 
 .rotate .menu-open {

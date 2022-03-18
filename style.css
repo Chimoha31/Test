@@ -13,7 +13,7 @@ body {
 }
 
 .start {
-  background: #FFF;
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,8 @@ body {
   z-index: 9000;
 }
 
-.start h1, .start p {
+.start h1,
+.start p {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -85,6 +86,7 @@ body {
 
 .audio audio {
   display: none;
+  z-index: 800;
 }
 
 .audio p {
@@ -145,6 +147,23 @@ body {
     -webkit-transform: none;
             transform: none;
   }
+}
+
+.brief_explain {
+  margin-top: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.brief_explain h3 {
+  font-family: "Arizonia", cursive;
+  width: 100%;
+  font-size: 30px;
 }
 
 .about_me {
@@ -233,6 +252,11 @@ body {
 .about_me .detail h1 {
   font-family: "Arizonia", cursive;
   font-size: 40px;
+}
+
+.about_me .detail h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
 }
 
 .about_me .detail a {
@@ -344,6 +368,9 @@ footer .icons i {
   .start p {
     font-size: 25px;
   }
+  .brief_explain h3 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -354,15 +381,18 @@ footer .icons i {
     font-size: 25px;
   }
   .about_me .inner {
-    width: 60%;
+    width: 50%;
   }
-  footer::before {
+  .brief_explain h3 {
+    font-size: 50px;
+  }
+  .brief_explain footer::before {
     -webkit-clip-path: circle(13.5% at 84.1% 40%);
             clip-path: circle(13.5% at 84.1% 40%);
   }
-  footer::after {
-    -webkit-clip-path: circle(35.8% at 29% 98%);
-            clip-path: circle(35.8% at 29% 98%);
+  .brief_explain footer::after {
+    -webkit-clip-path: circle(33.8% at 29% 98%);
+            clip-path: circle(33.8% at 29% 98%);
   }
 }
 /*# sourceMappingURL=style.css.map */
